@@ -1,0 +1,12 @@
+--- fs/io-wq.c.orig     2021-09-19 23:21:39.050499166 -0400
++++ fs/io-wq.c  2021-09-19 23:21:54.833484764 -0400
+@@ -5,6 +5,9 @@
+  * Copyright (C) 2019 Jens Axboe
+  *
+  */
++
++#include <linux/audit.h>
++
+ #include <linux/kernel.h>
+ #include <linux/init.h>
+ #include <linux/errno.h>

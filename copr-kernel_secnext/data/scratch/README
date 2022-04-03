@@ -1,0 +1,25 @@
+The following additional files/directories need to be created:
+
+* pcopr.confg - pcopr configuration file
+See the https://github.com/pcmoore/copr-pkg_scripts project for information
+
+* copr_config - Copr API token file
+See https://copr.fedorainfracloud.org/api for information
+
+* pcopr_patch - symlink
+Symlink to copr-pkg_scripts/pcopr_patch
+
+* pcopr_srpm-kernel_rawhide - symlink
+Symlink to copr-pkg_scripts/pcopr_srpm-kernel_rawhide
+
+* kernel - Fedora kernel RPM repo
+Create via 'git clone https://src.fedoraproject.org/rpms/kernel.git kernel'
+
+* linux-sources - Linux Kernel source repositories
+A Linux Kernel source repository with all of the remote trees you wish to use
+to generate patches, plus Linus' tree stored with a remote name of 'linus'.
+For example, on my system to build the kernel-secnext kernels I have the
+following remotes: 'audit', 'selinux', and 'linus'.  I also have a local branch
+named 'fixes' which I use to commit build fixes necessary to to build the
+kernel.  More information can be found with the copr-pkg_scripts tools.
+

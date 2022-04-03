@@ -1,0 +1,11 @@
+--- kernel/seccomp.c.orig       2019-05-07 15:16:04.926231448 -0400
++++ kernel/seccomp.c    2019-05-07 15:16:36.979731772 -0400
+@@ -148,7 +148,7 @@ static void populate_seccomp_data(struct
+        unsigned long args[6];
+ 
+        sd->nr = syscall_get_nr(task, regs);
+-       sd->arch = syscall_get_arch();
++       sd->arch = syscall_get_arch(task);
+        syscall_get_arguments(task, regs, args);
+        sd->args[0] = args[0];
+        sd->args[1] = args[1];

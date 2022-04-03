@@ -1,0 +1,16 @@
+diff --git kernel.spec kernel.spec
+index a0e515a61..00f2e3aa5 100644
+--- kernel.spec
++++ kernel.spec
+@@ -33,9 +33,9 @@ Summary: The Linux kernel
+ %global distro_build 0.rc3.1
+ 
+ %if 0%{?fedora}
+-%define secure_boot_arch x86_64
++%define secure_boot_arch NONE
+ %else
+-%define secure_boot_arch x86_64 aarch64 s390x ppc64le
++%define secure_boot_arch NONE
+ %endif
+ 
+ # Signing for secure boot authentication

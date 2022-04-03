@@ -1,0 +1,10 @@
+--- security/selinux/hooks.c.orig       2020-02-12 10:28:41.611831037 -0500
++++ security/selinux/hooks.c    2020-02-12 10:29:17.786179243 -0500
+@@ -702,6 +702,7 @@ static int selinux_set_mnt_opts(struct s
+        if (!strcmp(sb->s_type->name, "debugfs") ||
+            !strcmp(sb->s_type->name, "tracefs") ||
+            !strcmp(sb->s_type->name, "binder") ||
++           !strcmp(sb->s_type->name, "bpf") ||
+            !strcmp(sb->s_type->name, "pstore"))
+                sbsec->flags |= SE_SBGENFS;
+ 

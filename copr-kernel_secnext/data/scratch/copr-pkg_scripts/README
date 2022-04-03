@@ -1,0 +1,6 @@
+A local copy of https://github.com/pcmoore/copr-pkg_scripts.git should be here,
+to do this simply run the following git command in the /pjob.data/scratch
+directory:
+
+  % git clone https://github.com/pcmoore/copr-pkg_scripts.git copr-pkg_scripts
+

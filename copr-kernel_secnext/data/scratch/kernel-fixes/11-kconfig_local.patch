@@ -1,0 +1,19 @@
+diff --git kernel-local kernel-local
+index 8c32be5be..5285fb13a 100644
+--- kernel-local
++++ kernel-local
+@@ -1,2 +1,12 @@
+-# This file is intentionally left empty in the stock kernel. Its a nicety
+-# added for those wanting to do custom rebuilds with altered config opts.
++
++CONFIG_ANDROID=y
++CONFIG_ANDROID_BINDER_IPC=y
++CONFIG_ANDROID_BINDERFS=y
++CONFIG_ANDROID_BINDER_DEVICES="binder,hwbinder,vndbinder"
++# CONFIG_ANDROID_BINDER_IPC_SELFTEST is not set
++
++CONFIG_SECURITY_SELINUX_SIDTAB_HASH_BITS=9
++CONFIG_SECURITY_SELINUX_SID2STR_CACHE_SIZE=256
++
++# CONFIG_ASHMEM is not set
++# CONFIG_ION is not set
